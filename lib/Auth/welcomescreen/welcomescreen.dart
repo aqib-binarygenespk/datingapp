@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../themesfolder/theme.dart';
+
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
 
@@ -18,7 +20,7 @@ class WelcomeScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                'assets/Pairup 1@2x.jpg',
+                'assets/mainlogo2.png',
                 width: 150,
                 errorBuilder: (context, error, stackTrace) {
                   return const Text(
@@ -27,13 +29,12 @@ class WelcomeScreen extends StatelessWidget {
                   );
                 },
               ),
-              const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/loginPhone');
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white.withOpacity(0.8),
+                  backgroundColor:  AppTheme.backgroundColor,
                   minimumSize: const Size(300, 50),
                 ),
                 child: const Text(
@@ -47,7 +48,7 @@ class WelcomeScreen extends StatelessWidget {
                   Navigator.pushNamed(context, '/loginEmail');
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white.withOpacity(0.8),
+                  backgroundColor: AppTheme.backgroundColor,
                   minimumSize: const Size(300, 50),
                 ),
                 child: const Text(
@@ -61,7 +62,7 @@ class WelcomeScreen extends StatelessWidget {
                   Navigator.pushNamed(context, '/signupPhone');
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white.withOpacity(0.8),
+                  backgroundColor: AppTheme.backgroundColor,
                   minimumSize: const Size(300, 50),
                 ),
                 child: const Text(

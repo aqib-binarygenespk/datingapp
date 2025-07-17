@@ -1,11 +1,15 @@
+import 'package:dating_app/themesfolder/textfields.dart';
 import 'package:flutter/material.dart';
+
+import '../../themesfolder/theme.dart';
+
 
 class Resetyourpassword extends StatelessWidget {
   const Resetyourpassword({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         leading: IconButton(
@@ -28,39 +32,38 @@ class Resetyourpassword extends StatelessWidget {
               "What email address is associated to your account?",
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.w300),
             ),
-
-            // Email TextFormField
             const SizedBox(height: 20),
-            const Text("Email"),
-            const SizedBox(height: 6),
-            TextFormField(
-              decoration: InputDecoration(
-                hintText: "Enter your email",
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                floatingLabelBehavior: FloatingLabelBehavior.auto,
-              ),
+
+            // Reuse CustomTextField for Email
+            const CustomTextField(
+
+              hintText: "Enter your email",
               keyboardType: TextInputType.emailAddress,
             ),
             const SizedBox(height: 15),
+
             const SizedBox(height: 20),
 
-            // Login Button
+            // Send Login Link Button
             ElevatedButton(
               onPressed: () {
                 Navigator.popAndPushNamed(context, '/setnewpassword');
-                // Add login with email functionality
+                // Add functionality for sending login link here
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF111827),
                 minimumSize: const Size(double.infinity, 50),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
               ),
-              child: const Text("Send Login link"),
+              child: const Text("Send Login link",style: TextStyle(
+                color: AppTheme.backgroundColor,
+              ),),
             ),
           ],
         ),
       ),
-    );;
+    );
   }
 }

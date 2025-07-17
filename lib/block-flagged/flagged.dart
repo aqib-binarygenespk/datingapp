@@ -27,10 +27,10 @@ class AccountFlaggedScreen extends StatelessWidget {
                 color: Colors.white.withOpacity(0.9),
                 borderRadius: BorderRadius.circular(16),
               ),
-              child: Column(
+              child: const Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Text(
+                  Text(
                     'Account Flagged',
                     style: TextStyle(
                       fontSize: 20,
@@ -39,8 +39,8 @@ class AccountFlaggedScreen extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 16),
-                  const Text(
+                  SizedBox(height: 16),
+                  Text(
                     'Your account has been flagged for review due to a violation of our community guidelines. We take user safety and community standards seriously.',
                     style: TextStyle(
                       fontSize: 14,
@@ -48,8 +48,8 @@ class AccountFlaggedScreen extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 16),
-                  const Align(
+                  SizedBox(height: 16),
+                  Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
                       'What to do next:',
@@ -60,8 +60,8 @@ class AccountFlaggedScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 8),
-                  const Text(
+                  SizedBox(height: 8),
+                  Text(
                     '• Please check your email for more details regarding this action and the next steps to resolve the issue.\n'
                         '• If you believe this was a mistake, you can reach out to our support team for assistance.\n\n'
                         'Thank you for your understanding.',
